@@ -1,0 +1,27 @@
+{
+  "groups": [
+    {
+      "name": "google.recaptcha.key",
+      "type": "finance.rok.uservalidationservice.config.CaptchaSettings",
+      "sourceType": "finance.rok.uservalidationservice.config.CaptchaSettings"
+    }
+  ],
+  "properties": [
+    {
+      "name": "google.recaptcha.key.secret",
+      "type": "java.lang.String",
+      "sourceType": "finance.rok.uservalidationservice.config.CaptchaSettings"
+    },
+    {
+      "name": "google.recaptcha.key.site",
+      "type": "java.lang.String",
+      "sourceType": "finance.rok.uservalidationservice.config.CaptchaSettings"
+    },
+    {
+      "name": "google.recaptcha.key.threshold",
+      "type": "java.lang.Float",
+      "sourceType": "finance.rok.uservalidationservice.config.CaptchaSettings"
+    }
+  ],
+  "hints": []
+}

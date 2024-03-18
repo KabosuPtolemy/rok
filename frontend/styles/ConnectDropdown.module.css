@@ -1,0 +1,156 @@
+.notExpandedAddressContainer {
+  display: flex;
+  height: min-content;
+  width: 200px;
+  align-items: center;
+  max-height: 45px;
+  border-radius: 11px;
+  transition: all 0.4s ease;
+  background-color: #252525;
+  border: solid #656565 1.8px;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.notExpandedAddressContainer:hover {
+  border-radius: 11px;
+  border: solid #202020 1.8px;
+  background-color: #353535;
+  transition: all 0.5s ease;
+}
+
+.expandedAddressContainer {
+  width: 200px;
+  padding-left: 10px;
+  border: solid #252525 1.8px;
+  background-color: #353535;
+  border-radius: 11px;
+  transition: all 0.5s ease;
+  cursor: default;
+  color: #ffffff;
+}
+
+.expandedAddressContainer:hover {
+  border: solid #656565 1.8px;
+  border-radius: 11px;
+  transition: all 0.5s ease;
+}
+
+.arrowContainer {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  cursor: pointer;
+}
+.arrowIcon {
+  font-size: 15px;
+}
+
+.addressDropdownTitle {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  position: relative;
+  align-items: stretch;
+  justify-items: start;
+  font-size: 17px;
+  letter-spacing: 0.8px;
+  padding: 2% 7%;
+  color: #bbbbbb;
+  margin-bottom: 2%;
+  transition: all 0.3s ease;
+}
+.addressDropdownTitle:hover {
+  color: #ffffff;
+  transition: all 0.6s ease;
+}
+
+.addressDropdownIcon {
+  color: #60abef;
+  margin-right: 5%;
+}
+
+.dropdown {
+  min-height: 35px;
+  min-width: 100px;
+  border: 2px solid #656565;
+  border-radius: 11px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+  z-index: 1;
+}
+.dropdown:hover {
+  border: 2px solid #202020;
+  transition: all 0.5s ease;
+}
+.dropdownToggle {
+  min-height: 35px;
+  min-width: 100px;
+  width: 100%;
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: #252525;
+  transition: all 0.5s ease;
+  color: white;
+  letter-spacing: 1px;
+}
+.dropdownToggleExpanded {
+  font-weight: lighter;
+  font-size: small;
+  letter-spacing: 1.1px;
+  font-style: italic;
+  cursor: pointer;
+  display: flex;
+  position: relative;
+  text-align: center;
+  place-content: center;
+}
+.dropdownToggleExpanded2 {
+  font-weight: lighter;
+  font-size: small;
+  letter-spacing: 1.1px;
+  font-style: italic;
+  cursor: default;
+  position: relative;
+  text-align: center;
+  place-content: center;
+}
+.dropdownMenu {
+  margin: 10px;
+}
+
+/* isConnected */
+.connectedContainer {
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  grid-column-gap: 10px;
+  font-size: 15px;
+  max-height: 30px;
+}
+
+.jazzIcon {
+  justify-content: center;
+  padding: 3px 0 0 0;
+  margin: 0 10px 0 5px;
+}
+
+.address {
+  padding: 5px 10px;
+  display: grid;
+  grid: column;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  font-size: medium;
+  font-weight: 550;
+  letter-spacing: 0.9px;
+  border-radius: 15px;
+  max-height: 45px;
+  max-width: 160px;
+}
+
+/*  */

@@ -1,0 +1,148 @@
+.hamburger_dropdown {
+  height: fit-content;
+  width: 100%;
+  border: solid black 1.5px;
+  border-radius: 10px;
+  padding: 5px 15px 5px 15px;
+  background-color: #252525;
+}
+
+.title {
+  margin: 0 0 5px 5px;
+  font-weight: lighter;
+  letter-spacing: 1.1px;
+  font-style: italic;
+  cursor: default;
+}
+
+.connect {
+  border: solid #656565 1.5px;
+  text-align: center;
+  padding: 5px 0 5px 0;
+  min-width: fit-content;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.connect:hover {
+  border: solid #656565 1.5px;
+  transition: all 0.2s ease;
+}
+
+.links {
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1.4px;
+  border: solid #656565 1px;
+  border-radius: 12px;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+.company {
+  transition: all 0.3s ease;
+  cursor: pointer;
+  width: fit-content;
+  margin-bottom: 15px;
+}
+.crowdfunding {
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  width: fit-content;
+}
+.swap {
+  transition: all 0.3s ease;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.network_img {
+  width: 35px;
+}
+
+.network_img_unselected {
+  width: 32px;
+}
+
+.address {
+  margin-left: 5px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.networks_list {
+  border: solid #656565 1px;
+  border-radius: 12px;
+  padding: 3px 5px 3px 5px;
+  margin-bottom: 10px;
+  font-variant-caps: all-petite-caps;
+  font-size: larger;
+}
+
+.network {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  height: fit-content;
+  max-height: 40px;
+  padding: 3px 2px 3px 2px;
+  border: solid #656565 1.5px;
+  margin-bottom: 5px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.network:hover {
+  border: solid black 1.5px;
+  transition: all 0.5s ease;
+}
+
+.selected_network_expanded {
+  display: grid;
+  grid-template-columns: 25% 60% 15%;
+  max-height: 40px;
+  height: fit-content;
+  padding: 2px;
+  border: solid #656565 1.5px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  cursor: default;
+  transition: all 0.4s ease;
+}
+
+.selected_network_expanded:hover {
+  border: solid black 1.5px;
+  transition: all 0.4s ease;
+}
+
+.selected_network_not_expanded {
+  display: grid;
+  grid-template-columns: 25% 60% 15%;
+  max-height: 40px;
+  height: fit-content;
+  padding: 2px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.selected_network_not_expanded:hover {
+  transition: all 0.4s ease;
+}
+
+.network_name {
+  font-weight: bold;
+  margin: auto 0 auto 0;
+}
+
+.jazzIcon {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: start;
+  align-items: flex-start;
+  inline-size: min-content;
+}

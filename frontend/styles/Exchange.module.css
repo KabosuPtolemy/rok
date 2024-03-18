@@ -1,0 +1,228 @@
+.container {
+  align-items: center;
+  justify-items: center;
+  flex-direction: column;
+  display: flex;
+  /* max-height: 60vh; */
+  position: relative;
+  margin-top: 7%;
+}
+.card {
+  position: relative;
+  flex: auto;
+  display: inline-block;
+  width: 600px;
+  padding: 10px 5px 5px 5px;
+  border-radius: 13px;
+  background: #353535;
+}
+
+.swapbox {
+  transition: all 1s ease;
+  border-radius: 15px;
+  margin-top: 10px;
+}
+.swapTitle {
+  letter-spacing: 1px;
+  font: bolder;
+  margin: 0px;
+  padding: 5px 0px 0px 10px;
+  cursor: default;
+  color: #000;
+  position: relative;
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+}
+/* Swapbox top part */
+.swapboxtop {
+  align-items: flex-start;
+  position: relative;
+  display: flex;
+  height: 70px;
+  padding: 5px;
+}
+.tokenTextTop {
+  color: #000;
+  cursor: default;
+  text-align: end;
+  font-size: 25px;
+  font-weight: 500;
+  padding-left: 5px;
+}
+.amountTop {
+  position: relative;
+  border-color: transparent;
+  text-align: start;
+  font-size: 40px;
+  cursor: default;
+  color: #000;
+  margin: 0px;
+  font-family: monospace;
+}
+/*  */
+
+/* Token */
+.token {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px;
+  flex: auto;
+}
+.tokenImg {
+  width: 30px;
+  height: 30px;
+  cursor: default;
+}
+.redText {
+  display: flex;
+  position: sticky;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: -10px;
+  margin-right: 12px;
+  flex: auto;
+  color: rgb(176, 4, 4);
+}
+.normalText {
+  display: flex;
+  position: sticky;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: -10px;
+  margin-right: 12px;
+  flex: auto;
+  color: #666;
+}
+/*  */
+
+/* Swapbox Bottom part */
+.swapboxbottom {
+  display: flex;
+  align-items: center;
+  position: relative;
+  min-height: 100px;
+  padding: 5px;
+}
+.bottom {
+  background-color: #202020;
+  border-radius: 10px;
+  margin: 0px;
+}
+.swapTitleBottom {
+  letter-spacing: 1px;
+  font: bolder;
+  margin: 0px;
+  padding: 10px 0px 0px 12px;
+  cursor: default;
+  color: #666;
+  position: relative;
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+}
+.tokenTextBottom {
+  color: #666;
+  cursor: default;
+  text-align: end;
+  font-size: 25px;
+  font-weight: 500;
+  padding-left: 5px;
+}
+.amountBottom {
+  margin: 0px;
+  position: relative;
+  border-color: transparent;
+  background-color: transparent;
+  padding: 0px 5px;
+  text-align: start;
+  font-size: 40px;
+  cursor: default;
+  color: #666;
+  font-family: monospace;
+}
+/*  */
+
+.divider {
+  border: 0.5px solid transparent;
+  background-color: #616161;
+  width: 97%;
+}
+
+/* Info Container */
+.infoContainer {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 5px 0px 5px 10px;
+  transition: all 1s ease;
+  color: #616161;
+}
+.infoContainer:hover {
+  color: #acacac;
+  transition: all 0.5s ease;
+}
+.infoImg {
+  margin: 0px 5px;
+}
+.infoText {
+  font-size: 13px;
+  cursor: default;
+  font-weight: 350;
+}
+/*  */
+
+/* swap button */
+.swapButton {
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 1%;
+  height: 60px;
+  width: 98%;
+  border-radius: 10px;
+  position: relative;
+  letter-spacing: 1px;
+  font-size: 30px;
+  font: bold;
+  font-variant-caps: all-petite-caps;
+  background-color: #353535;
+  border: 1.5px solid #252525;
+  color: white;
+  transition: all 1s ease;
+  font-weight: bold;
+}
+
+.swapButton:hover {
+  border: 1.5px solid black;
+  background-color: #60abef;
+  transition: 0.7s ease;
+  color: black;
+}
+/*  */
+
+@media screen and (max-width: 650px) {
+  .card {
+    position: relative;
+    flex: auto;
+    display: inline-block;
+    width: 400px;
+    padding: 10px 5px 5px 5px;
+    border-radius: 13px;
+    background: #353535;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .card {
+    position: relative;
+    flex: auto;
+    display: inline-block;
+    width: 300px;
+    padding: 10px 5px 5px 5px;
+    border-radius: 13px;
+    background: #353535;
+  }
+}

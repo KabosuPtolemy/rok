@@ -1,0 +1,72 @@
+{
+	"compiler": {
+		"version": "0.8.6+commit.11564f7e"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "addressToAmountFunded",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "fund",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"hardhat/contracts/NFTSale-pTest.sol": "NFTsalepTest"
+		},
+		"evmVersion": "berlin",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"hardhat/contracts/NFTSale-pTest.sol": {
+			"keccak256": "0xf9dcfc86cc99eb6b85723c7fa0c9a1ae404793f3af7a87a8e6bd5917e688c071",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://55e9c724e9e9ab45e2e2c355018c02ddb4131d1c17b7868fb25ef931acbba607",
+				"dweb:/ipfs/QmS6eCZgRkR2aa2BmrwrBEXMg22Nz91sBzNzuc4A16bbkC"
+			]
+		}
+	},
+	"version": 1
+}

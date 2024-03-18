@@ -1,0 +1,733 @@
+.container {
+  height: 100%;
+}
+/* USER NOT CONNECTED */
+.notContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 85vh;
+}
+.warningContainer {
+  background-color: #2c2c2c;
+  color: #bbbbbb;
+  font-size: 2.5vh;
+  padding: 1.5vh 4vw;
+  transition: all ease 0.7s;
+  border-radius: 0.8rem;
+  cursor: default;
+  border: 1px solid #60abef;
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.warningContainer:hover {
+  box-shadow: 0px 0px 30px 10px #1a1a1a;
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+.notIcon {
+  color: #60abef;
+  font-size: 40px;
+  margin-right: 8px;
+}
+.notTitle {
+  color: #bbbbbb;
+  font-variant-caps: all-petite-caps;
+  font-size: 25px;
+  font-weight: bold;
+  margin: 0;
+  text-align: center;
+}
+.notSubContainer {
+  display: flex;
+  align-items: center;
+}
+.notSubContainer:hover .notSubtitle {
+  color: #eeeeee;
+  transition: all 0.8s ease;
+}
+.notSubicon {
+  color: #bbbbbb;
+  font-size: 18px;
+  margin-right: 5px;
+}
+.notSubtitle {
+  color: #cccccc;
+  cursor: default;
+  font-size: 16px;
+  text-align: center;
+  transition: all 0.5s ease;
+}
+/* USER NOT CONNECTED END */
+
+/* USER CONNECTED */
+.isContainer {
+  min-height: 50svh;
+  height: 100%;
+  position: relative;
+  padding: 0 20%;
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+.rightContainer {
+  margin-bottom: 5%;
+}
+/* save/edit changes button start */
+.editParentContainer {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+.editButton {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: row;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  margin-right: 20px;
+  margin: 2% 2% 0 0;
+  cursor: pointer;
+}
+.editContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: row;
+  width: 200px;
+  height: 50px;
+
+  padding: 0px 16px;
+  border: 1px solid #bbb;
+  border-radius: 10px;
+  background-color: #343434;
+  color: #bbb;
+  letter-spacing: 1.5px;
+  font-family: "Courier New", Courier, monospace;
+  transition: all 0.3s ease;
+}
+.editContainer:hover {
+  background-color: #252525;
+  transition: all 0.8s ease;
+}
+.editContainer:hover .editIcon {
+  color: #d9edff;
+  transition: color 0.5s ease;
+}
+.editTitle {
+  font-size: 15px;
+}
+.editIcon {
+  color: #60abef;
+  font-size: 23px;
+  margin-left: 10px;
+  transition: color 0.5s ease;
+}
+/* save/edit changes button end */
+.iconButton {
+  cursor: default;
+}
+/* PROFILE EDIT */
+.iconContainer {
+  padding-top: 5%;
+}
+.userIcon {
+  width: fit-content;
+  max-width: max-content;
+}
+.userAddress {
+  display: flex;
+  align-items: flex-start;
+  justify-content: left;
+  font-size: 20px;
+  margin-top: 8px;
+  width: fit-content;
+  transition: all 0.3s ease;
+  color: #bbb;
+
+  position: relative;
+  border: none;
+  background: none;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
+}
+
+.userAddress:focus:after,
+.userAddress:hover:after {
+  width: 100%;
+  left: 0%;
+}
+.userAddress:hover {
+  color: #ddd;
+}
+.userAddress:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #bbbbbb;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
+}
+.UserIconEdit {
+  z-index: 1;
+  margin: 0px -25px;
+  color: #a9bed1;
+  font-size: 30px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.userIcon:hover .UserIconEdit {
+  color: #214361;
+  transition: color 0.5s ease;
+}
+.etherscan {
+  width: 20px;
+  margin-right: 8px;
+}
+/* Icon choose Container */
+.modalContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+.modal {
+  background-color: #65656534;
+  border: 1px solid #bbbbbb;
+  padding: 10px;
+  border-radius: 13px;
+  max-width: 550px;
+  width: 100%;
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+}
+.modalHeader {
+  display: grid;
+  grid-template-columns: 95% 5%;
+  align-items: center;
+  color: #e6e6e6;
+  margin-top: -17px;
+}
+.modalTitle {
+  text-align: center;
+  cursor: default;
+}
+.closeButton {
+  position: relative;
+  display: flex;
+  place-content: flex-end;
+  font-size: 30px;
+  cursor: pointer;
+  margin-top: -15px;
+  padding: 0px;
+}
+.iconStyling {
+  display: grid;
+  grid-template-columns: 90% 10%;
+  margin: 0;
+}
+.iconOptions {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+}
+.iconOption {
+  font-size: 30px;
+  cursor: pointer;
+  margin: 13% 0px;
+}
+.iconColorOptions {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2%;
+
+  .colorOption {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid #ccc;
+  }
+}
+@media screen and (max-width: 450px) {
+  .iconOptions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .modalTitle {
+    font-size: 20px;
+  }
+}
+/* Icon choose Container END */
+/* Input Container */
+.inputContainer {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  height: fit-content;
+  padding-right: 5%;
+  padding-top: 5%;
+  align-items: flex-start;
+}
+.inputRowContainer {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+.inputRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.inputTitle {
+  color: #bbb;
+  width: 220px;
+  display: flex;
+  justify-content: end;
+  position: relative;
+  letter-spacing: 1.3px;
+  font-size: 17px;
+  padding-right: 10px;
+  cursor: default;
+}
+.input {
+  width: 350px;
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+
+  padding: 8px;
+  border: 1px solid #bbb;
+  outline: none;
+  border-radius: 6px;
+  background-color: #343434;
+  color: #bbb;
+  font-size: 15px;
+  letter-spacing: 1.5px;
+  font-family: "Courier New", Courier, monospace;
+}
+.input:focus {
+  background-color: #252525;
+  transition: all 1s ease;
+}
+.address {
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  padding: 8px;
+  /* border: 1px solid #bbb; */
+  outline: none;
+  border-radius: 6px;
+  /* background-color: #343434; */
+  color: #bbb;
+  /* cursor: default; */
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  font-family: "Courier New", Courier, monospace;
+}
+.handleAddWalletAddress {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-self: center;
+  width: fit-content;
+  margin-left: 100px;
+  padding: 0px 8px;
+  border: 1px solid #bbb;
+  outline: none;
+  border-radius: 6px;
+  background-color: #343434;
+  color: #bbb;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.handleAddWalletAddress:hover .handleAddWalletAddressIcon {
+  color: #56ab28;
+  transition: all 0.3s ease;
+}
+.handleAddWalletAddress:hover {
+  background-color: #252525;
+  transform: all 0.5s ease;
+}
+.handleAddWalletAddressTitle {
+  font-size: 12px;
+}
+.handleAddWalletAddressIcon {
+  font-size: 15px;
+  margin-left: 5px;
+  transition: all 0.5s ease;
+}
+.handleDeleteWalletAddress {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-self: center;
+  width: fit-content;
+  padding: 9px;
+  border: 1px solid #bbb;
+  outline: none;
+  border-radius: 6px;
+  background-color: #343434;
+  color: #bbb;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  margin-left: 5px;
+}
+.handleDeleteWalletAddressIcon {
+  font-size: 15px;
+  color: #a63d3d;
+  transition: all 0.5s ease;
+}
+.handleDeleteWalletAddress:hover .handleDeleteWalletAddressIcon {
+  color: #c03838;
+  transition: all 0.3s ease;
+}
+/* passwords */
+.passwordContainer {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  margin: 20px 0;
+}
+.passwordContainerExpanded {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #bbb;
+  border-radius: 20px;
+  padding: 0 2%;
+}
+.passwordButton {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border: 1px solid #bbb;
+  border-radius: 10px;
+  margin-left: 70px;
+  padding: 0px 16px;
+}
+.passwordButtonExpanded {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-left: 50px;
+}
+.passwordButtonTitle {
+  color: #bbb;
+  font-size: 15px;
+}
+.togglePasswordButton {
+  position: relative;
+  background-color: transparent;
+  outline: none;
+  border: transparent;
+  color: #60abef;
+  font-size: 20px;
+  cursor: pointer;
+}
+/* passwords end */
+/* Status select start */
+.statusContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.statusTitle {
+  font-size: 20px;
+  color: #d4d4d4;
+  cursor: default;
+}
+.statusOptions {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+}
+.statusButton {
+  background-color: #343434;
+  border: 1px solid #bbb;
+  border-radius: 10px;
+  padding: 5px;
+  color: #bbb;
+  cursor: pointer;
+
+  width: 70px;
+  height: 70px;
+  display: grid;
+  grid-template-rows: 80% 10%;
+  align-items: center;
+  justify-items: center;
+  transition: all 0.3s ease;
+}
+.statusButton:hover {
+  background-color: #252525;
+  transition: all 0.8s ease;
+}
+
+.statusIconInvestor,
+.statusIconCreator,
+.statusIconNone {
+  font-size: 40px;
+  transition: all 0.5s ease;
+  margin: 0px;
+}
+.statusButton:hover .statusIconInvestor {
+  color: #163c5d;
+}
+.statusButton:hover .statusIconCreator {
+  color: #ad49c1;
+}
+.statusButton:hover .statusIconNone {
+  color: #a63d3d;
+}
+.selectedStatusButton {
+  background-color: #252525;
+  border: 1px solid #bbb;
+  border-radius: 10px;
+  padding: 5px;
+  color: #bbb;
+  cursor: pointer;
+
+  width: 70px;
+  height: 70px;
+  display: grid;
+  grid-template-rows: 80% 10%;
+  align-items: center;
+  justify-items: center;
+  transition: all 0.3s ease;
+}
+.selectedIconInvestor {
+  color: #163c5d;
+}
+.selectedIconCreator {
+  color: #ad49c1;
+}
+.selectedIconNone {
+  color: #a63d3d;
+}
+.statusIconTitle {
+  font-size: 15px;
+  margin: 3px 1px 1px 1px;
+}
+/* Status select end */
+.statusRenderContainer {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.statusRenderTitle {
+  color: #bbb;
+  display: flex;
+  justify-content: end;
+  position: relative;
+  letter-spacing: 1.3px;
+  font-size: 17px;
+  padding-right: 5px;
+  cursor: default;
+}
+.statusRenderIcon {
+  font-size: 20px;
+}
+/* Input container end */
+/* KYC CONTAINER */
+.kyc {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-right: 5%;
+}
+.kycCheckboxContainer {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: #bbbbbb;
+  margin-bottom: 10px;
+}
+.kycCheckboxContainerInput {
+  display: none;
+}
+.kycCheckboxContainerSvg {
+  overflow: visible;
+  height: 20px;
+}
+.kycCheckboxContainerPath {
+  fill: none;
+  stroke: #bbb;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: stroke-dasharray 0.5s ease, stroke-dashoffset 0.5s ease;
+  stroke-dasharray: 241 9999999;
+  stroke-dashoffset: 0;
+}
+.kycCheckboxContainer input:checked ~ svg .kycCheckboxContainerPath {
+  stroke-dasharray: 70.5096664428711 9999999;
+  stroke-dashoffset: -262.2723388671875;
+  stroke: #60abef;
+}
+.kycCheckboxContainerTitle {
+  display: inline-block;
+  width: fit-content;
+  height: fit-content;
+  font-size: 17px;
+  transition: all 0.3s ease;
+  margin-left: 10px;
+
+  position: relative;
+  border: none;
+  background: none;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
+}
+.kycCheckboxContainerTitle:focus:after,
+.kycCheckboxContainerTitle:hover:after {
+  width: 100%;
+  left: 0%;
+}
+.kycCheckboxContainerTitle:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #bbbbbb;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
+}
+/* image drop */
+.form {
+  background-color: transparent;
+  border: 1px solid #aaaaaa;
+  border-radius: 13px;
+  padding: 1.5rem 0.7rem 0.7rem 0.7rem;
+  text-align: center;
+  font-size: 1.125rem;
+  display: grid;
+  position: relative;
+  align-items: center;
+  margin: 0 1% 2% 1%;
+}
+.formTitle {
+  color: #bbbbbb;
+  font-size: 1.8rem;
+  font-weight: 500;
+  cursor: default;
+}
+.formParagraph {
+  margin-top: 10px;
+  font-size: 0.9375rem;
+  color: rgb(105, 105, 105);
+  cursor: default;
+}
+.dropContainer {
+  min-height: 150px;
+  background-color: #353535;
+  position: relative;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px dashed #205ad792;
+  color: #bbbbbb;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out, border 0.2s ease-in-out;
+}
+.dropContainer:hover {
+  background: #205ad792;
+  border-color: rgba(17, 17, 17, 0.616);
+}
+.dropContainer:hover .drop-title {
+  color: #222;
+}
+.dropTitle {
+  color: #bbbbbb;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  transition: color 0.2s ease-in-out;
+}
+#fileInput {
+  width: 350px;
+  max-width: 100%;
+  color: #bbbbbb;
+  padding: 2px;
+  background: #252525;
+  border-radius: 10px;
+  border: 1px solid rgba(8, 8, 8, 0.288);
+}
+#fileInput::file-selector-button {
+  margin-right: 20px;
+  border: none;
+  background: #60abef;
+  /* background: #084cdf; */
+  padding: 10px 20px;
+  border-radius: 7px;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+#fileInput::file-selector-button:hover {
+  /* background: #0d45a5; */
+  background: #1961a5;
+}
+
+.kycRenderClose {
+  font-size: 20px;
+  color: #a63d3d;
+}
+.kycRenderCheck {
+  font-size: 20px;
+  color: #3fb037;
+}
+/* image drop end */
+/* KYC CONTAINER END */
+
+/* PROFILE EDIT END */
+
+/* PROFILE VIEW */
+
+/* PROFILE VIEW END */
+
+/* USER CONNECTED END */

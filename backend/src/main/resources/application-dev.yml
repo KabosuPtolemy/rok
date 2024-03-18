@@ -1,0 +1,31 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://test-rok-finance-user:MfSsrRGHRxnVqtZV@testcluster.0pwncrd.mongodb.net/?retryWrites=true&w=majority&connectTimeoutMS=300000&minPoolSize=0&maxPoolSize=10&maxIdleTimeMS=900000
+      database: rok-finance-test
+  ###### Email Properties ######
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: test.rokfinance@gmail.com
+    password: kinnnepptxsiftxr
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+
+google:
+  recaptcha:
+    key:
+      site: 6LfzeEUlAAAAANoIHs3e_hE6hJ_XecBYEG7_3pRn
+      secret: 6LfzeEUlAAAAAGBrKKurWRwTBUlDXQP_F5kNwh4j
+      threshold: 0.5
+
+jwt:
+  secret: aFZVWHpXVlJmUTdoeVB0bmUxTGpjRm5zbFNXdXpjbDBMd0p5a1FrVjFRZEw5OFBpdjBjVldNNFptVmFSblVMUU52VmRDeTBISFlQVFBmMFRJQkM2bElQeTFaRlZ4S29kZUgxbTBmb21lOUNlZms2am9kQ3dBd3BTV0phVmF3VUo=
+
+client:
+  url: http://localhost:3000

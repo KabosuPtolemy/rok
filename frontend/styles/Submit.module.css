@@ -1,0 +1,588 @@
+.container {
+  min-width: 40%;
+  min-height: 15%;
+  border-radius: 12px;
+  border: 2px solid #aaaaaa;
+  text-align: center;
+  display: grid;
+}
+.submitButton {
+  padding: 10px 20px;
+  color: #bbbbbb;
+  width: 100%;
+  background-color: transparent;
+  border: transparent;
+  letter-spacing: 1.4%;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.formContainer {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  margin: 1% 0;
+}
+
+.titles {
+  color: #bbbbbb;
+  cursor: default;
+  font-weight: bold;
+  font-size: large;
+}
+.descriptions {
+  cursor: default;
+  font-size: 15px;
+  color: #bbbbbb;
+}
+.infoDescriptions {
+  width: 100%;
+  cursor: default;
+  font-size: 15px;
+  color: #999999;
+  display: flex;
+  place-content: center;
+  align-items: center;
+  transition: all 1s ease;
+}
+.infoDescriptions:hover {
+  color: #e1e1e1;
+  transition: all 0.5s ease;
+}
+
+.whitepaperLink {
+  cursor: pointer;
+  margin: 10px auto 10px 0;
+  font-size: medium;
+  transition: all 0.2s ease;
+  position: relative;
+  border: none;
+  background: none;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
+  color: #bbbbbb;
+}
+.whitepaperLink:focus:after,
+.whitepaperLink:hover:after {
+  width: 100%;
+  left: 0%;
+}
+.whitepaperLink:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #bbbbbb;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
+}
+/* project Name input */
+.nameContainer {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+}
+.nameInput {
+  position: relative;
+  width: 90%;
+  height: 40px;
+  background-color: transparent;
+  border: 2px solid #aaaaaa;
+  border-radius: 6px;
+  color: #bbbbbb;
+  font-size: larger;
+}
+/*  */
+/* Drop images */
+.form {
+  background-color: transparent;
+  border: 1px solid #aaaaaa;
+  border-radius: 13px;
+  padding: 1.5rem 0.7rem 0.7rem 0.7rem;
+  text-align: center;
+  font-size: 1.125rem;
+  display: grid;
+  position: relative;
+  align-items: center;
+  margin: 0 1% 2% 1%;
+}
+
+.formTitle {
+  color: #bbbbbb;
+  font-size: 1.8rem;
+  font-weight: 500;
+  cursor: default;
+}
+
+.formParagraph {
+  margin-top: 10px;
+  font-size: 0.9375rem;
+  color: rgb(105, 105, 105);
+  cursor: default;
+}
+
+.dropContainer {
+  min-height: 150px;
+  background-color: #353535;
+  position: relative;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px dashed #205ad792;
+  color: #bbbbbb;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out, border 0.2s ease-in-out;
+}
+
+.dropContainer:hover {
+  background: #205ad792;
+  border-color: rgba(17, 17, 17, 0.616);
+}
+
+.dropContainer:hover .drop-title {
+  color: #222;
+}
+
+.dropTitle {
+  color: #bbbbbb;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  transition: color 0.2s ease-in-out;
+}
+
+#fileInput {
+  width: 350px;
+  max-width: 100%;
+  color: #bbbbbb;
+  padding: 2px;
+  background: #252525;
+  border-radius: 10px;
+  border: 1px solid rgba(8, 8, 8, 0.288);
+}
+
+#fileInput::file-selector-button {
+  margin-right: 20px;
+  border: none;
+  background: #60abef;
+  /* background: #084cdf; */
+  padding: 10px 20px;
+  border-radius: 7px;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+#fileInput::file-selector-button:hover {
+  /* background: #0d45a5; */
+  background: #1961a5;
+}
+/*  */
+
+/* collection standard */
+.standardContainer {
+  display: grid;
+  grid-template-columns: 30% 20% 50%;
+  place-items: center;
+  margin: 5px 20px 20px 20px;
+}
+.standardTypeContainer {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: #bbbbbb;
+}
+.standardContainerInput {
+  display: none;
+}
+.standardContainerSvg {
+  overflow: visible;
+  height: 20px;
+}
+.standardContainerPath {
+  fill: none;
+  stroke: #bbb;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: stroke-dasharray 0.5s ease, stroke-dashoffset 0.5s ease;
+  stroke-dasharray: 241 9999999;
+  stroke-dashoffset: 0;
+}
+.standardContainer input:checked ~ svg .standardContainerPath {
+  stroke-dasharray: 70.5096664428711 9999999;
+  stroke-dashoffset: -262.2723388671875;
+  stroke: #60abef;
+}
+.standardContainerTitle {
+  display: inline-block;
+  width: fit-content;
+  height: fit-content;
+  font-size: 15px;
+  transition: all 0.3s ease;
+
+  position: relative;
+  border: none;
+  background: none;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
+}
+.standardContainerTitle:focus:after,
+.standardContainerTitle:hover:after {
+  width: 100%;
+  left: 0%;
+}
+.standardContainerTitle:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #bbbbbb;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
+}
+/*  */
+/* address container */
+.addressContainer {
+  display: grid;
+  place-items: center;
+  margin-bottom: 30px;
+}
+.addressInput {
+  position: relative;
+  width: 80%;
+  height: 40px;
+  background-color: transparent;
+  border: 2px solid #aaaaaa;
+  border-radius: 6px;
+  color: #bbbbbb;
+  font-size: larger;
+}
+/*  */
+
+/* description container */
+.descriptionContainer {
+  display: grid;
+  grid-template-rows: 10% 10% 80%;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  /* margin-bottom: 2%; */
+}
+.descriptionInput {
+  position: relative;
+  width: 98%;
+  height: 100px;
+  background-color: transparent;
+  border: 2px solid #aaaaaa;
+  border-radius: 6px;
+  place-self: center;
+  color: #bbbbbb;
+  margin-top: -10px;
+  font-size: 20px;
+}
+/*  */
+/* price and goal container */
+/* price container */
+.priceContainer {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+}
+.priceInput {
+  position: relative;
+  width: 90%;
+  height: 40px;
+  background-color: transparent;
+  border: 2px solid #aaaaaa;
+  border-radius: 6px;
+  color: #bbbbbb;
+  font-size: larger;
+}
+/*  */
+
+/* goal container */
+.goalContainer {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+}
+/*  */
+/* links container */
+
+/* website container */
+.rowedContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 1%;
+}
+.websiteContainer {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+}
+.linkInput {
+  margin: 0 5%;
+  position: relative;
+  width: 85%;
+  height: 40px;
+  background-color: transparent;
+  border: 2px solid #aaaaaa;
+  border-radius: 6px;
+  color: #bbbbbb;
+  font-size: larger;
+  place-self: center;
+  display: flex;
+}
+/*  */
+
+/*  */
+
+/* kyc container  */
+.kycCheckboxContainer {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #bbbbbb;
+  margin-bottom: 10px;
+}
+.kycCheckboxContainerInput {
+  display: none;
+}
+.kycCheckboxContainerSvg {
+  overflow: visible;
+  height: 20px;
+}
+.kycCheckboxContainerPath {
+  fill: none;
+  stroke: #bbb;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: stroke-dasharray 0.5s ease, stroke-dashoffset 0.5s ease;
+  stroke-dasharray: 241 9999999;
+  stroke-dashoffset: 0;
+}
+.kycCheckboxContainer input:checked ~ svg .kycCheckboxContainerPath {
+  stroke-dasharray: 70.5096664428711 9999999;
+  stroke-dashoffset: -262.2723388671875;
+  stroke: #60abef;
+}
+.kycCheckboxContainerTitle {
+  display: inline-block;
+  width: fit-content;
+  height: fit-content;
+  font-size: 17px;
+  transition: all 0.3s ease;
+  margin-left: 10px;
+
+  position: relative;
+  border: none;
+  background: none;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
+}
+.kycCheckboxContainerTitle:focus:after,
+.kycCheckboxContainerTitle:hover:after {
+  width: 100%;
+  left: 0%;
+}
+.kycCheckboxContainerTitle:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #bbbbbb;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
+}
+
+/*  */
+/* email */
+/* .emailContainer {
+  display: grid;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+} */
+/*  */
+
+/* submit project button */
+.submitProject {
+  cursor: pointer;
+  text-transform: uppercase;
+  margin-top: 15px;
+  padding: 8px 0 8px 0;
+  font-size: 15px;
+  border-radius: 0.5em;
+  background-color: #353535;
+  border: 2px solid #252525;
+  width: 30%;
+  font-weight: bold;
+  transition: all 0.7s ease;
+  color: white;
+}
+
+.submitProject:hover {
+  border: 2px solid black;
+  background-color: #60abef;
+  transition: 0.2s ease;
+  color: black;
+}
+/*  */
+
+/* loading screen */
+/* .loadingScreen {
+  background-color: #252525;
+  width: 100%;
+  height: 100%;
+} */
+.fullScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #252525ca; /* Adjust the opacity and color as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 9999; /* Set a higher z-index value to ensure it appears on top */
+}
+.loadingTitle {
+  font-size: 20px;
+  letter-spacing: 0.3px;
+  color: #dcdcdc;
+  cursor: default;
+}
+.loader {
+  --dim: 3rem;
+  width: var(--dim);
+  height: var(--dim);
+  position: relative;
+  animation: spin988 2s linear infinite;
+}
+
+.loader .circle {
+  --color: #60abef;
+  --dim: 1.2rem;
+  width: var(--dim);
+  height: var(--dim);
+  background-color: var(--color);
+  border-radius: 50%;
+  position: absolute;
+}
+
+.loader .circle:nth-child(1) {
+  top: 0;
+  left: 0;
+}
+
+.loader .circle:nth-child(2) {
+  top: 0;
+  right: 0;
+}
+
+.loader .circle:nth-child(3) {
+  bottom: 0;
+  left: 0;
+}
+
+.loader .circle:nth-child(4) {
+  bottom: 0;
+  right: 0;
+}
+
+@keyframes spin988 {
+  0% {
+    transform: scale(1) rotate(0);
+  }
+
+  20%,
+  25% {
+    transform: scale(1.3) rotate(90deg);
+  }
+
+  45%,
+  50% {
+    transform: scale(1) rotate(180deg);
+  }
+
+  70%,
+  75% {
+    transform: scale(1.3) rotate(270deg);
+  }
+
+  95%,
+  100% {
+    transform: scale(1) rotate(360deg);
+  }
+}
+/*  */
+
+@media screen and (max-width: 600px) {
+  .rowedContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .standardContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .ercTokenType {
+    padding: 20px;
+  }
+  .container {
+    margin: 0px 20px;
+  }
+  .submitProject {
+    width: auto;
+    padding: 8px 10px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .container {
+    width: max-content;
+    height: max-content;
+    margin: 0;
+    display: flow-root;
+  }
+  .form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .dropContainer {
+    width: 100%;
+  }
+}

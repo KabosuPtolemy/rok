@@ -1,0 +1,207 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background-color: #252525;
+  width: 35%;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.h2 {
+  margin-top: 0;
+  text-align: center;
+  cursor: default;
+}
+
+.formGroup {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input[type="email"],
+.input[type="password"],
+.input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #bbb;
+  outline: none;
+  border-radius: 6px;
+  background-color: #343434;
+  color: #bbb;
+  font-size: 15px;
+  letter-spacing: 1.5px;
+  font-family: "Courier New", Courier, monospace;
+}
+.passwordInputContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.input {
+  padding-right: 40px;
+}
+.togglePasswordButton {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  outline: none;
+  border: transparent;
+  color: #60abef;
+  font-size: 18px;
+  cursor: pointer;
+}
+/* sign in button */
+.signInContainer {
+  display: flex;
+  place-content: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.signInButton {
+  background-color: #60abef;
+  font-size: 16px;
+  color: #191919;
+  border: 1px solid #60abef;
+  border-radius: 5px;
+  width: 100%;
+  height: 35px;
+  cursor: pointer;
+  transition: all ease 0.5s;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+}
+.signInButton:hover {
+  color: #000000;
+  transition: all ease 0.7s;
+  background-color: #3592ea;
+}
+/*  */
+
+/* form bottom */
+.formBottom {
+  display: flex;
+  width: 100%;
+}
+/* close button */
+.closeButton {
+  font-size: 12px;
+  transition: all 0.3s ease;
+  margin: auto;
+  background-color: transparent;
+  border: none;
+  color: #60abef;
+  cursor: pointer;
+
+  position: relative;
+  border: none;
+  background: none;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
+}
+.closeButton:focus:after,
+.closeButton:hover:after {
+  width: 100%;
+  left: 0%;
+}
+.closeButton:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  background-color: #60abef;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
+}
+
+/* sign up container */
+.signUpContainer {
+  display: flex;
+  white-space: nowrap;
+  margin: auto;
+  align-items: center;
+  text-align: center;
+}
+.signUpTitle {
+  font-size: 12px;
+  cursor: default;
+  margin: auto;
+  font-weight: 500;
+}
+/* sign up button */
+.signUpButton {
+  margin: auto;
+  font-size: 12px;
+  transition: all 0.3s ease;
+  background-color: transparent;
+  border: none;
+  color: #60abef;
+  cursor: pointer;
+
+  position: relative;
+  border: none;
+  background: none;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
+}
+.signUpButton:focus:after,
+.signUpButton:hover:after {
+  width: 100%;
+  left: 0%;
+}
+.signUpButton:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  background-color: #60abef;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
+}
+/*  */
+/*  */
+/*  */
+.connectButton {
+  min-height: 35px;
+  min-width: 100px;
+  border: 2px solid #202020;
+  border-radius: 11px;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: #252525;
+  transition: all 0.5s ease;
+  color: white;
+  letter-spacing: 1px;
+}
+.connectButton:hover {
+  border: 2px solid #656565;
+}
